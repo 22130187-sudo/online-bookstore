@@ -1,0 +1,179 @@
+/* General Reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffe4e1; 
+  color: #333;
+}
+
+/* Container for home page */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+  color: #fff;
+  padding: 60px 20px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 25px rgba(255,105,180,0.3);
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-family: 'Pacifico', cursive;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hero-btn, .hero-btn-outline {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Solid pink button */
+.hero-btn {
+  background-color: #ff1493; 
+  color: #fff;
+  border: none;
+}
+
+.hero-btn:hover {
+  transform: scale(1.05);
+  background-color: #ff69b4;
+}
+
+/* Outline button */
+.hero-btn-outline {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.hero-btn-outline:hover {
+  background-color: #fff;
+  color: #ff1493;
+  transform: scale(1.05);
+}
+
+
+.featured-section {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-title {
+  font-family: 'Pacifico';
+  font-size: 2.5rem;
+  color: #ff1493;
+  margin-bottom: 30px;
+}
+
+/* Grid of featured books */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* Each featured book card */
+.featured-card {
+  background-color: #fff0f5;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(255,105,180,0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.featured-card h3 {
+  font-size: 1.2rem;
+  color: #ff1493;
+  font-weight: bold;
+}
+
+.featured-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(255,105,180,0.4);
+}
+
+/* View all books button */
+.all-books-wrapper {
+  margin-top: 30px;
+}
+
+.view-all-btn {
+  display: inline-block;
+  background-color: #ff1493;
+  color: #fff;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.view-all-btn:hover {
+  background-color: #ff69b4;
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  .featured-card img {
+    height: 200px;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

@@ -1,0 +1,26 @@
+.books-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .books-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .books-grid { grid-template-columns: 1fr; }
+}
+
+.page-title {
+  font-size: 2rem;
+  color: #ff1493;
+  text-align: center;
+  margin-bottom: 20px;
+}
