@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/online-bookstore/static/css/main.bf50af05.css",
+    "main.js": "/online-bookstore/static/js/main.2fca7c7b.js",
+    "static/media/gatsby.jpg": "/online-bookstore/static/media/gatsby.90927a5ee9bfea5b67e6.jpg",
+    "static/media/LOFR.jpg": "/online-bookstore/static/media/LOFR.80e39b3b59570b591803.jpg",
+    "static/media/nine.jpg": "/online-bookstore/static/media/nine.18e728441354f535da27.jpg",
+    "static/media/catcher.jpg": "/online-bookstore/static/media/catcher.687bbcac67bf1d512c7f.jpg",
+    "static/media/pride.jpg": "/online-bookstore/static/media/pride.bf6652a2d932a8da2c01.jpg",
+    "static/media/TheHobbit.jpg": "/online-bookstore/static/media/TheHobbit.4a90f855033c2bddcd8f.jpg",
+    "service-worker.js": "/online-bookstore/service-worker.js",
+    "static/media/mockingbird.jpg": "/online-bookstore/static/media/mockingbird.12237bf1dcd584862e8d.jpg",
+    "index.html": "/online-bookstore/index.html",
+    "main.bf50af05.css.map": "/online-bookstore/static/css/main.bf50af05.css.map",
+    "main.2fca7c7b.js.map": "/online-bookstore/static/js/main.2fca7c7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bf50af05.css",
+    "static/js/main.2fca7c7b.js"
+  ]
+}
