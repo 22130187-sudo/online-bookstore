@@ -10,7 +10,7 @@ export default function BookCard({ book }) {
   return (
     <div className="book-card">
       <Link to={`/books/${book.id}`}>
-        <img src={book.image} alt={book.title} />
+        <img src={book.image} alt={book.title} className="book-image" />
       </Link>
       <h3>{book.title}</h3>
       <p>{book.author}</p>
