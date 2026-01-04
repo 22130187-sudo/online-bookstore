@@ -1,12 +1,15 @@
 const mysql = require('mysql2');
 
-// We use direct values to ensure we connect to YOUR phpMyAdmin
-
-const db = mysql.createConnection({
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.DB_PASSWORD || 'your_local_password',
-    database: process.env.DB_NAME || 'bookstore'
+// 1. Create the pool
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',  // ⚠️ If you have a MySQL password, type it inside these quotes!
+    database: 'bookstore',
+    waitForConnections: true,
+    connectionLimit: 10,
+    queueLimit: 0
 });
 
+// 2. Export the pool (This fixes the 'pool is not defined' error)
 module.exports = pool.promise();
