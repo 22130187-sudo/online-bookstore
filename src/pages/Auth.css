@@ -1,0 +1,181 @@
+/* Auth.css - Professional Split Layout */
+
+/* Full page background */
+.auth-page-container {
+  min-height: 80vh; /* Takes up most of the screen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-bg); /* #f9f9f9 from theme */
+  padding: 40px 20px;
+}
+
+/* The Card Wrapper */
+.auth-card {
+  display: flex;
+  background: white;
+  width: 100%;
+  max-width: 900px;
+  border-radius: var(--radius); /* 12px */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* Deep elegant shadow */
+  overflow: hidden; /* Ensures image doesn't bleed out */
+  min-height: 550px;
+}
+
+/* --- Left Side: Image --- */
+.auth-image {
+  flex: 1; /* Takes 50% width */
+  background-image: url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=800&q=80');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 40px;
+}
+
+/* Dark overlay for text readability on image */
+.auth-image .overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+}
+
+.auth-image h3 {
+  color: white;
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+/* --- Right Side: Form --- */
+.auth-form-section {
+  flex: 1; /* Takes 50% width */
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-header {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.auth-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--dark-text);
+  margin-bottom: 10px;
+}
+
+.auth-header p {
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: var(--dark-text);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fafafa;
+  transition: all 0.3s;
+}
+
+.form-group input:focus {
+  border-color: var(--dark-text);
+  background-color: white;
+  outline: none;
+}
+
+/* Error Message */
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  text-align: center;
+  border: 1px solid #ffcdd2;
+}
+
+/* Button */
+.auth-btn {
+  width: 100%;
+  padding: 14px;
+  background-color: var(--dark-text);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.auth-btn:hover {
+  background-color: var(--deep-pink);
+  transform: translateY(-2px);
+}
+
+.auth-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Footer Link */
+.auth-footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.auth-footer a {
+  color: var(--deep-pink);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .auth-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+  
+  .auth-image {
+    display: none; /* Hide image on mobile to save space */
+  }
+  
+  .auth-form-section {
+    padding: 40px 25px;
+  }
+}

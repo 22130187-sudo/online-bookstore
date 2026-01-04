@@ -1,0 +1,81 @@
+/* Section Background */
+.features-section {
+  padding: 80px 20px;
+  background-color: #fffbf0; /* Creamy background to separate sections */
+  text-align: center;
+}
+
+/* Title */
+.features-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Pink Underline for Title */
+.features-title::after {
+  content: '';
+  display: block;
+  width: 60%;
+  height: 3px;
+  background: #ff1493;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* The Grid Layout */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Cards */
+.feature-card {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Soft expensive shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid white;
+}
+
+/* Hover Effect: The "Lift" */
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(255, 105, 180, 0.2); /* Pink glow */
+  border-color: #ffb6c1;
+}
+
+/* Icon Styling */
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: #fff0f5; /* Light pink circle bg */
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Text Styling */
+.feature-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #ff1493;
+  margin-bottom: 15px;
+}
+
+.feature-text {
+  font-family: 'Poppins', sans-serif;
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}

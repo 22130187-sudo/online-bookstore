@@ -1,0 +1,116 @@
+/* Footer.css - Compact Version */
+
+.site-footer {
+  background-color: #1a1a1a; /* Dark Luxury Background */
+  color: #e0e0e0;
+  padding: 40px 0 0 0; /* Reduced top padding */
+  margin-top: auto;
+  font-family: var(--font-body);
+  font-size: 0.9rem; /* Slightly smaller text overall */
+}
+
+.footer-container {
+  max-width: 1000px; /* Limits width for a compact look */
+  margin: 0 auto;
+  padding: 0 20px 30px 20px; /* Reduced bottom padding */
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* 3 Columns */
+  gap: 30px;
+  border-bottom: 1px solid #333;
+}
+
+/* Headings */
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem; /* Smaller Logo */
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.footer-col h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: white;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Description Text */
+.footer-desc {
+  line-height: 1.5;
+  color: #888;
+  margin-bottom: 20px;
+  max-width: 250px;
+}
+
+/* Links List */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px; /* Tighter spacing */
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: var(--primary-pink);
+  padding-left: 3px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.social-links a:hover {
+  opacity: 1;
+  color: var(--primary-pink);
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #555;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr; /* Stack vertically */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .footer-desc {
+    margin: 0 auto 20px auto;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,287 @@
+/* --- HERO SECTION (Professional & Animated) --- */
+.hero {
+  /* Gentle gradient blending white into your theme's light beige */
+  background: linear-gradient(to bottom, #ffffff 0%, var(--light-bg) 100%);
+  height: 65vh; /* Slightly taller for grandeur */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 800px; /* Constrains text width so it doesn't stretch too wide */
+  animation: fadeInUp 1.2s ease-out forwards; /* The professional entrance */
+  opacity: 0; /* Hidden initially, revealed by animation */
+  transform: translateY(20px);
+}
+
+.hero h1 {
+  font-family: var(--font-heading); /* Playfair Display */
+  font-size: 4rem; /* Larger, more impactful */
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 25px;
+  line-height: 1.1;
+  letter-spacing: -1px; /* Tighter spacing looks more expensive */
+}
+
+.hero p {
+  font-family: var(--font-body);
+  font-size: 1.25rem;
+  color: #555; /* Slightly softer than black */
+  margin-bottom: 45px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* --- LUXURY BUTTON STYLE --- */
+.hero-btn {
+  padding: 16px 45px;
+  background-color: var(--dark-text); /* Black background */
+  color: white;
+  border: 1px solid var(--dark-text);
+  border-radius: 50px; /* Pill shape */
+  
+  /* Typography */
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase; /* Uppercase adds authority */
+  letter-spacing: 1px; /* Spacing out uppercase letters is very chic */
+  
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); /* Smooth physics */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hero-btn:hover {
+  background-color: transparent; /* Hollow out on hover */
+  color: var(--dark-text);
+  transform: translateY(-3px); /* Lifts up */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* --- ANIMATION DEFINITION --- */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  .hero { height: 50vh; }
+  .hero h1 { font-size: 2.8rem; }
+  .hero p { font-size: 1.1rem; }
+  .hero-btn { padding: 14px 35px; }
+}
+
+/* --- 2. SECTIONS & HEADERS --- */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-padding {
+  padding-bottom: 80px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-family: var(--font-heading);
+  font-size: 2.8rem;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+}
+
+/* The Pink Divider (Matches Pages.css) */
+.divider-center {
+  height: 3px;
+  width: 70px;
+  background-color: var(--primary-pink);
+  margin: 0 auto 20px auto;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: #888;
+  font-style: italic;
+}
+
+/* --- 3. THE BOOK GRID (4 Columns) --- */
+.grid-4-col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+  .grid-4-col { grid-template-columns: repeat(2, 1fr); }
+  .hero h1 { font-size: 2.5rem; }
+}
+
+@media (max-width: 600px) {
+  .grid-4-col { grid-template-columns: 1fr; }
+}
+
+/* --- 4. BOOK CARD STYLING (Embedded for Safety) --- */
+/* This ensures the cards look right even if BookCard.css is missing */
+.book-card {
+  background: white;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px; /* Matches var(--radius) concept */
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  border-color: transparent;
+}
+
+.book-card img {
+  width: 100%;
+  height: 380px; /* Consistent Height */
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--dark-text);
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-info .author {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer .price {
+  font-weight: 700;
+  color: var(--dark-text);
+}
+
+.add-btn {
+  background: transparent;
+  border: 1px solid var(--dark-text);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background: var(--dark-text);
+  color: white;
+}
+
+/* --- 5. SECONDARY BUTTON (View All) --- */
+.text-center { text-align: center; }
+
+.btn-secondary {
+  margin-top: 50px;
+  background: transparent;
+  border: 1px solid var(--dark-text);
+  color: var(--dark-text);
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background: var(--dark-text);
+  color: white;
+}
+
+/* --- 6. NEWSLETTER --- */
+.newsletter-section {
+  background-color: var(--light-bg); /* Soft beige/pink bg */
+  padding: 100px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.newsletter-content h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+}
+
+.newsletter-content p {
+  font-family: var(--font-body);
+  color: #666;
+}
+
+.input-group {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-group input {
+  padding: 14px 20px;
+  width: 350px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-family: var(--font-body);
+  outline: none;
+}
+
+.input-group button {
+  padding: 14px 30px;
+  background-color: var(--primary-pink);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.input-group button:hover {
+  background-color: var(--deep-pink);
+}

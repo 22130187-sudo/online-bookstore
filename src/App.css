@@ -1,0 +1,159 @@
+/* App.css - The Elegant Boutique Theme */
+:root {
+  /* Your Theme Colors */
+  --primary-pink: #ffb6c1;      /* Soft Pink */
+  --deep-pink: #ff1493;         /* Deep Pink (Hover/Accent) */
+  --dark-text: #2d2d2d;         /* Soft Black */
+  --light-bg: #fff9fa;          /* Very faint pinkish white for background */
+  --white: #ffffff;
+  
+  /* Fonts */
+  --font-heading: 'Playfair Display', serif; /* Your chosen font */
+  --font-body: 'Roboto', sans-serif;
+  
+  /* Spacing & Shadows */
+  --shadow: 0 10px 30px rgba(0,0,0,0.08);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* --- Layout Wrappers --- */
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* --- YOUR HERO SECTION (Integrated) --- */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1507842217343-583bb726cc2e?auto=format&fit=crop&w=1600&q=80');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px; /* Added spacing below hero */
+  border-radius: 0 0 20px 20px; /* Slight curve at bottom looks premium */
+}
+
+.hero h1 {
+  font-family: var(--font-heading);
+  font-size: 3.5rem; /* Made slightly larger */
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero button {
+  background-color: var(--primary-pink);
+  color: var(--dark-text); /* Dark text reads better on light pink */
+  border: none;
+  padding: 14px 35px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 182, 193, 0.4);
+}
+
+.hero button:hover {
+  background-color: var(--deep-pink);
+  color: white;
+  transform: translateY(-3px);
+}
+
+/* --- YOUR GRID & CARDS (Integrated) --- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Made cards slightly wider */
+  gap: 30px;
+  padding: 0 20px 60px 20px;
+}
+
+.book-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.book-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.book-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.book-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+  color: var(--dark-text);
+}
+
+.book-price {
+  color: var(--deep-pink);
+  font-weight: bold;
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.btn-card {
+  padding: 10px 20px;
+  border: 2px solid var(--primary-pink);
+  background: transparent;
+  color: var(--dark-text);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: 600;
+}
+
+.btn-card:hover {
+  background: var(--primary-pink);
+  color: white;
+}

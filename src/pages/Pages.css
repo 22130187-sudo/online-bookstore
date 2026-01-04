@@ -1,0 +1,131 @@
+/* Pages.css - Professional Styling */
+
+/* --- General Layout --- */
+.about-page {
+  padding-bottom: 60px;
+}
+
+/* --- Header Section --- */
+.about-header {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: var(--light-bg); /* Uses your App.css variable */
+}
+
+.about-title {
+  font-family: var(--font-heading); /* Playfair Display */
+  font-size: 3rem;
+  color: var(--dark-text);
+  margin-bottom: 20px;
+}
+
+.about-subtitle {
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.divider {
+  height: 3px;
+  width: 80px;
+  background-color: var(--primary-pink); /* Your theme pink */
+  margin: 0 auto 20px auto;
+}
+
+/* --- Split Layout Sections --- */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 80px;
+}
+
+/* Reverses the order for the second section */
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: var(--dark-text);
+  position: relative;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.8; /* Professional line height for readability */
+  margin-bottom: 20px;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow); /* Soft shadow from App.css */
+  object-fit: cover;
+  height: 400px;
+}
+
+.signature {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--deep-pink);
+  margin-top: 20px;
+}
+
+/* --- Stats Bar --- */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  padding: 60px 20px;
+  background-color: white;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  color: var(--deep-pink);
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  font-family: var(--font-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 768px) {
+  .about-section, .about-section.reverse {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .stats-bar {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
