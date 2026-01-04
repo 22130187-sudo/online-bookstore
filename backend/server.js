@@ -84,7 +84,7 @@ app.post("/api/checkout", async (req, res) => {
 });
 
 // --- CHANGE IS HERE: PORT 5002 ---
-const PORT = 5002;
+const PORT = process.env.PORT || 5002; // Use Cloud port OR 5002 if local
 app.listen(PORT, () => {
-  console.log(`✅ SERVER RUNNING ON PORT ${PORT}`);
+    console.log(`✅ Server running on Port ${PORT}`);
 });
